@@ -5,15 +5,16 @@ import {
 } from "./ICategoriesRepository";
 
 class PostgresCategoriesRepository implements ICategoriesRepository {
-  findByName(name: string): Category {
+  findByName(name: string): Promise<Category> {
     console.log("name");
     return null;
   }
-  list(): Category[] {
+  list(): Promise<Category[]> {
     return null;
   }
-  create({ name, description }: ICreateCategoryDTO): void {
+  create({ name, description }: ICreateCategoryDTO): Promise<void> {
     console.log(name, description);
+    return null;
   }
 }
 
